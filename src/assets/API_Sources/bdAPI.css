@@ -1,0 +1,5 @@
+.cardDiv{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4,1fr)
+}

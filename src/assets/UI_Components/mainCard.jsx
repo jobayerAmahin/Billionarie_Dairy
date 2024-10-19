@@ -1,9 +1,10 @@
 import './mainCard.css'
-export default function MainCard(henkilö){
+export default function MainCard({hen}){
+    ///const [name,rank]=hen
     return(
         <div className='cardBox'>
-            <h1>Nimi on:{henkilö.personName}</h1>
-            <h4>Ikävia:</h4>
+            <img className='imageSize' src={hen.squareImage} alt="" />
+            <h4>Rank:{hen.rank}</h4>
             <h4>Sähköposti:</h4>
             <h4>Osoite:</h4>
         </div>
