@@ -11,17 +11,25 @@ const Bottles = () => {
 
     const [ValitsiLattikko,settiValitsiLattikko]=useState([])
     
-    const handleClickButton=(kuva)=>{
-        const uusiPala=[...ValitsiLattikko+kuva]
+    const handleClickButton=(bottle)=>{
+        const uusiPala=[...ValitsiLattikko,bottle]
         settiValitsiLattikko(uusiPala)
     }
     console.log(ValitsiLattikko)
+
     return (
         <>
             <div>
-                {
-
-                }
+                <div className="visitedSection">
+                    {
+                        ValitsiLattikko.map((b,idx)=>
+                            <div key={idx} className="visitedContainer">
+                                <h3>Hinta:{' '+b.price} euro</h3>
+                                <img src={b.img} alt="" />
+                            </div>
+                        )
+                    }
+                </div>
             </div>
             <div className="wholeBottleSection">
                 {

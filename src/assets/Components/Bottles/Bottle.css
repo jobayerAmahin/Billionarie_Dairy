@@ -3,3 +3,22 @@
     grid-template-columns: repeat(5,1fr);
     gap: 10px;
 }
+.visitedContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid greenyellow;
+    border-radius: 10px;
+    padding: 20px;
+}
+.visitedSection{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+.visitedContainer img{
+    width: 65px;
+    height: 100px;
+}

@@ -5,7 +5,7 @@ const SingleBottle = ({bottle,handleClickButton}) => {
         <div className='bottleContainer'>
             <img src={img} alt="" />
             <h3>Hinta:{price}</h3>
-            <button onClick={()=>handleClickButton(price)}>Osta</button>
+            <button onClick={()=>handleClickButton(bottle)}>Osta</button>
             <h4>Rating: {ratings}</h4>
         </div>
     );
