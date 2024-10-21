@@ -8,15 +8,29 @@ const Bottles = () => {
             .then(res=>res.json())
             .then(data=>setBottleArray(data))
     },[])
-    console.log(BottleArray)
+
+    const [ValitsiLattikko,settiValitsiLattikko]=useState([])
+    
+    const handleClickButton=(kuva)=>{
+        const uusiPala=[...ValitsiLattikko+kuva]
+        settiValitsiLattikko(uusiPala)
+    }
+    console.log(ValitsiLattikko)
     return (
-        <div className="wholeBottleSection">
-            {
-                BottleArray.map(bottle=>
-                    <SingleBottle bottle={bottle} key={bottle.id}></SingleBottle>
-                )
-            }
-        </div>
+        <>
+            <div>
+                {
+
+                }
+            </div>
+            <div className="wholeBottleSection">
+                {
+                    BottleArray.map(bottle=>
+                        <SingleBottle handleClickButton={handleClickButton} bottle={bottle} key={bottle.id}></SingleBottle>
+                    )
+                }
+            </div>
+        </>
     );
 };
 
