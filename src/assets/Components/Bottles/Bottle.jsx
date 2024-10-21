@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import SingleBottle from "../SingleBottle/SIngleBottle";
+import './Bottle.css'
 const Bottles = () => {
     const [BottleArray,setBottleArray]=useState([])
     useEffect(()=>{
@@ -9,8 +10,12 @@ const Bottles = () => {
     },[])
     console.log(BottleArray)
     return (
-        <div>
-            
+        <div className="wholeBottleSection">
+            {
+                BottleArray.map(bottle=>
+                    <SingleBottle bottle={bottle} key={bottle.id}></SingleBottle>
+                )
+            }
         </div>
     );
 };
