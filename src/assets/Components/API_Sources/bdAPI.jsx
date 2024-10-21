@@ -8,7 +8,7 @@ export default function GettingAPIData(){
             .then(res=>res.json())
             .then(data=>initFun(data))
     },[])
-    console.log(initVal)
+   
     return(
         <div className="cardDiv">
             {
