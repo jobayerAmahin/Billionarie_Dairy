@@ -12,8 +12,8 @@ export default function GettingAPIData(){
     return(
         <div className="cardDiv">
             {
-                initVal.map(ihmiset=>
-                    <MainCard hen={ihmiset}></MainCard>
+                initVal.map((ihmiset,idx)=>
+                    <MainCard hen={ihmiset} key={idx}></MainCard>
                 )
             }
             

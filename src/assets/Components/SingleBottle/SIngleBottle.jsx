@@ -1,4 +1,5 @@
 import './SingleBottle.css'
+import PropTypes from 'prop-types';
 const SingleBottle = ({bottle,handleClickButton}) => {
     const {img,price,ratings}=bottle
     return (
@@ -10,5 +11,10 @@ const SingleBottle = ({bottle,handleClickButton}) => {
         </div>
     );
 };
+
+SingleBottle.propTypes={
+    bottle: PropTypes.object.isRequired,
+    handleClickButton: PropTypes.func.isRequired
+}
 
 export default SingleBottle;
